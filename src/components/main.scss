@@ -1,0 +1,114 @@
+@import './globals.scss';
+
+.main__body {
+  position: relative;
+  background-color: $main-bg;
+  color: $alt-bg;
+  overflow: hidden;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  border-right: 1px solid white;
+	min-width: 100vw;
+	height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+
+}
+
+.main {
+  background-color: $main-bg !important;
+  color: $main-color !important;
+  fill: $main-color !important;
+}
+
+.alt {
+  background-color: $alt-bg !important;
+  color: $alt-color !important;
+  fill: $alt-color !important;
+}
+.nav-container {
+  position: absolute;
+  right: 1vw;
+  top: 50%;
+  @media screen and (max-width: 700px) {
+    top: 1vw
+  }
+}
+
+.main__body-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__name-container {
+  position: relative;
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: $bounds;
+}
+
+.footer-contact-container {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+
+.footer-date-container {
+  position: relative;
+  p {
+    position: absolute;
+    margin: 0;
+    right: 15px;
+    font-weight: 600;
+  }
+}
+
+.icon-button {
+  z-index: 5;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  &:focus {
+    border: "1px solid";
+    border-color: $alt-bg;
+  }
+}
+
+.icon-button--next {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  @media screen and (max-width: 700px) {
+    top: 40px;    
+  }
+}
+
+.icon-button--previous {
+  position: absolute;
+  right: 20px;
+}
+
+.icon-button-child--nav {
+  width: 2em !important;
+  height: 2em !important;
+  @media screen and (max-width: 700px) {
+    width: 1.5em !important;
+    height: 1.5em !important;
+  }
+}
+circle {
+  fill: white;
+}

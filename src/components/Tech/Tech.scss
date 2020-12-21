@@ -1,0 +1,21 @@
+@import '../globals.scss';
+
+.tech-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    color: inherit;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+  }
+  h2 {
+    margin: 0;
+  }
+  .title-active {
+    border-bottom: 4px solid $main-color;
+  }
+}

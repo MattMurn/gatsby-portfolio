@@ -1,0 +1,43 @@
+@import '../globals.scss';
+
+.about-container {
+  background-color: $main-color;
+  color: $alt-color;
+}
+
+.about-content {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  padding-left: 2vw;
+  max-width: 700px;
+  font-size: 22px;
+  font-weight: 700;
+
+  p {
+    line-height: 1.7;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 28px;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 16px;
+    p {
+      line-height: 1;
+    }
+    a {
+      font-size: 22px;
+    }
+  }
+}
+
+.about-topstep {
+  color: black;
+}
+
+.about-northwestern {
+  color: purple;
+}
