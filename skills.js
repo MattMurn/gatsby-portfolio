@@ -19,6 +19,6 @@ export default [
   {id: 18, name: 'NPM', value:401},
   {id: 19, name: 'Sockets', value:401},
   {id: 20, name: 'Git', value:500},
-  {id: 21, name: 'APIs', value:500},
+  {id: 21, name: 'HTTP', value:500},
   {id: 5, name: 'JavaScript', value:810},
 ]

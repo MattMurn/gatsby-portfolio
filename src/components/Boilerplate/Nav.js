@@ -1,7 +1,7 @@
 import React from 'react';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import IconButton from './IconButton/IconButton';
+import IconButton from '../IconButton/IconButton';
 import { Link } from '@reach/router';
 
 const Nav = ({style="main", nextLocation, previousLocation}) => {

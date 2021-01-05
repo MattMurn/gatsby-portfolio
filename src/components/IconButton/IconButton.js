@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types"
-import '../main.scss';
+import '../Boilerplate/main.scss';
 
  const IconButton = ({onClick, additionalClasses, ariaText, children}) => {
    return (
