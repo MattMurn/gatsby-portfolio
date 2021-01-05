@@ -1,5 +1,4 @@
 import React from 'react';
-import CallReceivedIcon from '@material-ui/icons/CallReceived';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from './IconButton/IconButton';

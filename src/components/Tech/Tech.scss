@@ -19,3 +19,22 @@
     border-bottom: 4px solid $main-color;
   }
 }
+
+.skills-svg {
+  height: 600px;
+  width: 1000px;
+}
+
+.skills-g {
+  transform: translate(40, 40);
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  font: 14px sans-serif;
+}
