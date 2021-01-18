@@ -11,7 +11,7 @@ export default [
   {id: 10, name: 'D3', value:380},
   {id: 11, name: 'HTML5', value:590},
   {id: 12, name: 'SCSS', value:570},
-  {id: 13, name: 'Material', value:510},
+  {id: 13, name: 'MaterialUI', value:510},
   {id: 14, name: 'MySQL', value:400},
   {id: 15, name: 'Postgres', value:400},
   {id: 16, name: 'Gulp', value:490},

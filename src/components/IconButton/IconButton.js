@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"
 import '../Boilerplate/main.scss';
 
- const IconButton = ({onClick, additionalClasses, ariaText, children}) => {
+ const IconButton = ({onClick=null, additionalClasses, ariaText, children}) => {
    return (
     <button aria-label={ariaText} className={`icon-button ${additionalClasses ? additionalClasses : ""}`} onClick={onClick}>
       {children}
