@@ -21,4 +21,5 @@ export default [
   {id: 20, name: 'Git', value:500},
   {id: 21, name: 'HTTP', value:500},
   {id: 5, name: 'JavaScript', value:810},
+  {id: 23, name: 'Flow', value:400}
 ]

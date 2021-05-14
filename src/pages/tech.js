@@ -5,7 +5,7 @@ import TechSim from "../components/Tech/TechSim"
 
 
 const TechPage = () => (
-  <Layout nextLocation="/" previousLocation="/about">
+  <Layout previousLocation="/about">
     <SEO title="Tech" />
     <TechSim/>
   </Layout>

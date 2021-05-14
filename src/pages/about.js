@@ -4,7 +4,7 @@ import SEO from "../components/Boilerplate/seo"
 import About from "../components/About/About"
 
 const AboutPage = () => (
-  <Layout style="alt" nextLocation="/tech" previousLocation="/">
+  <Layout style="alt" previousLocation="/">
     <SEO title="About" />
     <About style="alt"/>
   </Layout>

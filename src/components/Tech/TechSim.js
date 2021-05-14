@@ -19,7 +19,6 @@ const height = svgHeight - (margin * 2);
 
 const screenWidth = window.innerWidth;
 
-console.log(screenWidth);
 const dimensionsByDeviceSize = () => {
   switch(true) {
     case screenWidth > 1060:
@@ -78,7 +77,6 @@ const simulation = d3.forceSimulation(nodeData).force('x', d3.forceX(100)).force
   .enter()
   .append("circle")
   .attr("r",d =>  {
-    console.log(radiusDivider)
     return d.level})
   .attr("cx",d =>  d.x)
   .attr("cy",d =>  d.y)
@@ -99,16 +97,9 @@ const simulation = d3.forceSimulation(nodeData).force('x', d3.forceX(100)).force
 return (
   <section id="tech" className="tech-container">
     <div className="tech-title-container">
-      {/* <button onClick={() => setSkillsActive('skills')} aria-label="skills button">
-        <h2 className={skillsActive === 'skills' ? 'title-active': null}>Skills</h2>
-      </button> */}
-      {/* <p>Here is a breakdown of the languages, libraries, technologies, and APIs I use frequently. </p> */}
-      {/* <button onClick={() => setSkillsActive('projects')} aria-label="projects button">
-        <h2 className={skillsActive === 'projects' ? 'title-active': null}>Projects</h2>
-      </button> */}
     </div>
     <svg className="tech_svg">
-      <g ref={ref} transform={`translate(${margin},${margin})`} />
+      <g ref={ref} transform={`translate(${140},${margin})`} />
     </svg>
   </section >
 );

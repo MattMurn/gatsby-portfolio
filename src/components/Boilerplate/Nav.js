@@ -8,12 +8,12 @@ const Nav = ({style="main", nextLocation, previousLocation}) => {
     <nav className="nav-container">
     {previousLocation && (
       <Link aria-label="location link" to={previousLocation}>
-          <ArrowUpwardIcon className={`icon-button-child--nav ${style} icon-button--previous`} />
+          <ArrowUpwardIcon className={`icon-button-child--nav ${style} icon-button--previous `} />
       </Link>
     )}
     {nextLocation && (
       <Link aria-label="location link" to={nextLocation}>
-          <ArrowDownwardIcon className={`icon-button-child--nav ${style} icon-button--next`} />
+          <ArrowDownwardIcon className={`icon-button-child--nav ${style} ${previousLocation && nextLocation ? 'icon-button--next' : 'icon-button--previous'} `} />
       </Link>
     )}
   </nav>
