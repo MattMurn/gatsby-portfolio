@@ -1,14 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { select } from "d3";
 import skills from '../../../skills';
 import './Tech.scss';
 
 const TechSim = () => {
-const [skillsActive, setSkillsActive] = useState('skills');
-const [nodeData, setNodeData] = useState([])
-const [radiusDivider, setRadiusDivider] = useState(10);
-const [fontSize, setFontSize] = useState(14);
 const ref = useRef(null);
 const svgWidth = window.innerWidth - 300;
 const svgHeight = window.innerHeight < 1000 ? 800 : window.innerHeight - 200;
@@ -17,33 +13,12 @@ const margin = 40;
 const width = svgWidth - (margin * 2);
 const height = svgHeight - (margin * 2);
 
-const screenWidth = window.innerWidth;
-
-const dimensionsByDeviceSize = () => {
-  switch(true) {
-    case screenWidth > 1060:
-      console.log('mid width');
-      break;
-    case screenWidth > 992:
-      console.log('small width');
-      break;
-    case screenWidth < 789:
-      console.log('xs width');
-      setRadiusDivider(20);
-      setFontSize(10);
-      setNodeData(buildSkillNodes())
-      break;
-    default:
-      console.log('desktop');
-      break;
-  }
-}
 
 const randomPosition = () => {
   return Math.random() * 40;
 }
 
-const buildSkillNodes = () => {
+const buildSkillNodes = (radiusDivider) => {
   return skills.map(skill => {
     return {
       x: randomPosition(),
@@ -55,8 +30,17 @@ const buildSkillNodes = () => {
 }
 
 useEffect(() => {
-dimensionsByDeviceSize();
-const nodeData = buildSkillNodes();
+  let radiusDivider = 10;
+  let fontSize = 14;
+  if(window.innerWidth < 489){
+    radiusDivider = 20;
+    fontSize = 10;
+  } else if(window.innerWidth < 789){
+    radiusDivider = 15;
+    fontSize = 12
+  }
+// dimensionsByDeviceSize();
+const nodeData = buildSkillNodes(radiusDivider);
 const collisionForce = d3.forceCollide().radius(d => d.level).strength(.15);
 const simulation = d3.forceSimulation(nodeData).force('x', d3.forceX(100)).force('y', d3.forceY(150)).force("collisionForce",collisionForce).force('center', d3.forceCenter(width / 2, height / 2))
   const g = select(ref.current);
@@ -92,14 +76,15 @@ const simulation = d3.forceSimulation(nodeData).force('x', d3.forceX(100)).force
   .style("font-size", `${fontSize}`);
 
   simulation.on("tick",ticked);
-}, [height, width, skillsActive, fontSize, radiusDivider]);
+}, [height, width]);
 
 return (
   <section id="tech" className="tech-container">
     <div className="tech-title-container">
+      Technologies & Tools
     </div>
     <svg className="tech_svg">
-      <g ref={ref} transform={`translate(${140},${margin})`} />
+      <g ref={ref} transform={`translate(${180},${margin})`} />
     </svg>
   </section >
 );
