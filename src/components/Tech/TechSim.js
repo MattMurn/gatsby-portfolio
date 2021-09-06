@@ -6,6 +6,7 @@ import './Tech.scss';
 
 const TechSim = () => {
 const ref = useRef(null);
+if(typeof window === 'undefined') return null;
 const svgWidth = window.innerWidth - 300;
 const svgHeight = window.innerHeight < 1000 ? 800 : window.innerHeight - 200;
 const margin = 40;
