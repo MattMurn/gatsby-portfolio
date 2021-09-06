@@ -26,6 +26,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - name: Deploy
-        uses: mattmurn/gatsby-s3-action@v1
+        uses: MattMurn/gatsby-portfolio
         with:
           dest-s3-bucket: personal-gatsby-portfolio
